@@ -9,6 +9,7 @@
     <?php 
         echo "Esta é uma página de teste em PHP";
         echo "Branch de Filipe adicionada";
+        echo "Branch de Gabriel adicionada";
     ?>
 </body>
 </html>
