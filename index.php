@@ -8,6 +8,7 @@
 <body>
     <?php 
         echo "Esta é uma página de teste em PHP";
+        echo "Branch de Gabriel adicionada";
     ?>
 </body>
 </html>
