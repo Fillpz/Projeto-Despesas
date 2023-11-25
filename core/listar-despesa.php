@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./src/style.css">
+
 <?php 
 
     $sql = "SELECT * FROM despesas";
@@ -15,6 +17,7 @@
             print "<th>Categoria</th>";
             print "<th>Valor</th>";
             print "<th>Data final</th>";
+            print "<th>Ações</th>";
             print "</tr>";
         while($row = $res->fetch_object()){
             print "<tr>";
@@ -24,6 +27,13 @@
             print "<td>".$row->tipo_despesa."</td>";
             print "<td>".$row->valor_despesa."</td>";
             print "<td>".$row->data_limite."</td>";
+            print "<td>
+                <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
+
+
+                <button onclick=\"if(confirm('Deseja realmente exluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>";
+
+                
             print "</tr>";
         }
         print "</table>";

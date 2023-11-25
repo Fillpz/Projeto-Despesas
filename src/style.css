@@ -18,6 +18,18 @@ body {
     display: block;
 }
 
-#btn-cadastrar {
-    
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Centraliza o conteúdo na célula */
+}
+
+h3 {
+    margin: 0;
 }
