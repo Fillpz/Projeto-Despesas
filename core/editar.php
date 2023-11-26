@@ -23,7 +23,7 @@
 
                             <div class="mt-3">
                                 <label for="descricao_despesa">Descrição</label>
-                                <input value="<?php print $row->descricao_despesa ?>" type="text" name="descricao_despesa" onfocus="limparPlaceholder(this)" placeholder="Fale sobre a despesa..." class="form-control">
+                                <input value="<?php print $row-> descricao_despesa ?>" type="text" name="descricao_despesa" onfocus="limparPlaceholder(this)" placeholder="Fale sobre a despesa..." class="form-control">
                             </div>
 
                             <!-- Não consegui ajustar -->
@@ -82,6 +82,12 @@
             }
         }
     });
+
+    $(function () {
+
+        $(".form-select").val("<?php print $row-> tipo_despesa ?>");
+    });
+    
     </script>
 
 </body>
