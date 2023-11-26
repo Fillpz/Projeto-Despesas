@@ -73,7 +73,7 @@
     </script>
 
     <script>
-    $(".mask-n-2").mask("#.##0,00", {
+    $(".mask-n-2").mask("#0.00", {
         reverse: true,
         translation: {
             '#': {
@@ -87,7 +87,7 @@
 
         $(".form-select").val("<?php print $row-> tipo_despesa ?>");
     });
-    
+
     </script>
 
 </body>
