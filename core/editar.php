@@ -84,11 +84,22 @@ $row = $res->fetch_object();
     </script>
 
     <script>
-    $(".mask-n-2").mask("#.##0.00", {
+    $(".mask-n-2").mask("#0.00", {
         reverse: true,
         translation: {
-            ' #': { pattern: /-|\d/, recursive: true } } }); $(function() {
-                                    $(".form-select").val("<?php print $row->tipo_despesa ?>"); }); </script>
+            '#': {
+                pattern: /-|\d/,
+                recursive: true
+            }
+        }
+    });
+
+    $(function () {
+
+        $(".form-select").val("<?php print $row-> tipo_despesa ?>");
+    });
+    
+    </script>
 
 </body>
 

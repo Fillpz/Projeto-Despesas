@@ -83,7 +83,7 @@
     </script>
 
     <script>
-    $(".mask-n-2").mask("#.##0,00", {
+    $(".mask-n-2").mask("#0.00", {
         reverse: true,
         translation: {
             '#': {
