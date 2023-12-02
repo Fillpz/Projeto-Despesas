@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SpendMate</title>
 </head>
 
 <body>
@@ -17,14 +17,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Controle de Despesas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./src/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #8DC63F;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: var(--cor_primaria);">
         <div class="container-fluid mx-5">
-            <a class="navbar-brand" style="color: #ffffff; font-weight: bold" href="index.php">Controle de Despesas</a>
+            <a class="navbar-brand" style="color: #ffffff; font-weight: bold" href="index.php">SpendMate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="mt-5 mx-5">
-    <div>
-      <?php
+    <!-- <div class="div-container-listagem"> -->
+    <div class="mt-5 mx-5">
+        <!-- <div> -->
+        <?php
         include("./db/config.php");
         switch (@$_REQUEST["page"]) {
           case "novo":
@@ -51,17 +51,17 @@
             include("./core/editar.php");
             break;
           default:
-            echo "<div class='d-flex mb-5 justify-content-between align-items-center'>";
-            echo "<h3 class='float-left'>Lista de Despesas</h3>";
+            echo "<div class='d-flex div-header-table-style-css justify-content-between align-items-center'>";
+            echo "<h3 class='fs-3 fw-bold float-left' style='margin-left:15px;' >Lista de Despesas</h3>";
             if (@$_REQUEST["page"] != "novo") {
-              echo "<a type='submit' id='cadastrar' href='?page=novo' class='btn ml-auto' style='background-color: #8DC63F; color:white; font-weight: bold;'>Cadastrar</a>";
+              echo "<a type='submit' id='cadastrar' href='?page=novo' class='btn ml-auto' style='background-color: var(--cor_secundaria); color:white; margin-right: 15px; font-weight: bold;'>Cadastrar</a>";
             }
             echo "</div>";
         }
         ?>
-      </div>
+    </div>
 
-        <?php 
+    <?php 
           switch (@$_REQUEST["page"]){
             case (!"listar"):
               include("./core/listar-despesa.php");
@@ -69,7 +69,7 @@
           }
         ?>
 
-        </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

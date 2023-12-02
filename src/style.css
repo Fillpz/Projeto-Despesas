@@ -1,3 +1,13 @@
+
+/* Variáveis */
+
+:root {
+    --cor_primaria: #071251;
+    --cor_secundaria: #1A227D;
+    --branco: #fff;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -32,4 +42,77 @@ td {
 
 h3 {
     margin: 0;
+}
+
+.div-button {
+    position: relative;
+    left: 200px;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:active {
+    background-color: #141b5e;
+}
+
+.table-style-css{
+    max-height: 24rem;
+    max-width: 1040px;
+    overflow-y: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.div-header-table-style-css{
+    max-width: 65rem;
+    margin: 0 auto;
+    background: #F2F2F2;
+    height: 50px;
+    border-radius: 0;
+}
+
+.div-botoes-style-css{
+    display: flex;
+    gap: 5px;
+}
+
+.div-header-cadastrar-despesas {
+    font-family: 'Poppins';
+    color: var(--branco);
+    background: var(--cor_secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-enviar{
+    width: 95.52px;
+    background: var(--cor_secundaria);
+    color:white; 
+    font-weight: bold;
+}
+
+.button-enviar:hover{
+    background: #141b5e;
+    color: white;
+}
+
+.div-formulario{
+    width: 490px;
+}
+
+.div-container-listagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastrar {
+    margin-right: 10px;
 }

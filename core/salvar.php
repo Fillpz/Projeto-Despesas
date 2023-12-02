@@ -12,7 +12,7 @@
             $res = $conn->query($sql);
 
             if($res==true){
-                print "<script>alert('Despesa cadastrada com sucesso!')</script>";
+                // print "<script>alert('Despesa cadastrada com sucesso!')</script>";
                 print "<script>location.href='./index.php';</script>";
             } else {
                 print "<script>alert('Não foi possível cadastrar');</script>";
@@ -40,7 +40,7 @@
             $res = $conn->query($sql);
 
             if($res==true){
-                print "<script>alert('Despesa editada com sucesso!')</script>";
+                // print "<script>alert('Despesa editada com sucesso!')</script>";
                 print "<script>location.href='./index.php';</script>";
             } else {
                 print "<script>alert('Não foi possível editada');</script>";
@@ -55,7 +55,7 @@
             $res = $conn->query($sql);
 
             if($res==true){
-                print "<script>alert('Despesa excluída com sucesso!')</script>";
+                // print "<script>alert('Despesa excluída com sucesso!')</script>";
                 print "<script>location.href='./index.php';</script>";
             } else {
                 print "<script>alert('Não foi possível excluir');</script>";

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./src/style.css">
+<link rel="stylesheet" href="../src/style.css">
 
 <?php 
 
@@ -8,8 +8,10 @@
 
     $quantidade = $res->num_rows;
 
+    $totalDespesas = 0;
+
     if($quantidade > 0){
-        print "<table class='table table-hover table-striped table-bordered'>";
+        print "<table class='table mt-4 table-style-css shadow table-hover table-striped table-bordered'>";
             print "<tr>";
             print "<th>#</th>";
             print "<th>Nome</th>";
@@ -28,15 +30,15 @@
             print "<td>".$row->valor_despesa."</td>";
             print "<td>".$row->data_limite."</td>";
             print "<td>
-                <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
+                <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn button-enviar' style='width:78px;'>Editar</button>
 
 
-                <button onclick=\"if(confirm('Deseja realmente exluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>";
+                <button onclick=\"if(confirm('Deseja realmente exluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger' style='width:78px;'>Excluir</button>";
 
                 
             print "</tr>";
+            $totalDespesas += $row->valor_despesa;
         }
-        print "</table>";
     } else {
         print "<p class='alert alert-danger>Sem registros</p>";
     }
