@@ -31,8 +31,6 @@ $row = $res->fetch_object();
                                     name="descricao_despesa" onfocus="limparPlaceholder(this)"
                                     placeholder="Fale sobre a despesa..." class="form-control">
                             </div>
-
-                            <!-- Não consegui ajustar -->
                             <div class="mt-3">
                                 <label for="tipo_despesa"><span style="color:red;margin-right:5px;">*</span>Categoria</label>
                                 <select class="form-select" name="tipo_despesa" aria-label="Default select example">
@@ -95,7 +93,6 @@ $row = $res->fetch_object();
     });
 
     $(function () {
-
         $(".form-select").val("<?php print $row-> tipo_despesa ?>");
     });
     

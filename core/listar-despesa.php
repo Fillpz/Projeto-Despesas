@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="../src/style.css">
 
 <?php 
 
-    $sql = "SELECT * FROM despesas";
+    $sql = "SELECT * FROM despesas ORDER BY data_limite";
 
     $res = $conn->query($sql);
 
@@ -26,9 +25,17 @@
             print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
             print "<td>".$row->descricao_despesa."</td>";
-            print "<td>".$row->tipo_despesa."</td>";
-            print "<td>".$row->valor_despesa."</td>";
-            print "<td>".$row->data_limite."</td>";
+            $string = $row->valor_despesa;
+
+            $newString = str_replace(".", ",", $string);
+
+            print "<td>".ucfirst($row->tipo_despesa)."</td>";
+            print "<td class='text-right'> R$".$newString."</td>";
+
+            $data = $row->data_limite;
+            $arrayData = explode("-", $data);
+
+            print "<td>".$arrayData[2]."/".$arrayData[1]. "/" .$arrayData[0]. "</td>";
             print "<td>
                 <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn button-enviar' style='width:78px;'>Editar</button>
 

@@ -7,6 +7,11 @@
     --branco: #fff;
 }
 
+table tbody {
+    display: table;
+    width: 100%;
+}
+
 
 * {
     margin: 0;
@@ -67,6 +72,7 @@ input:active {
     overflow-y: auto;
     display: block;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 .div-header-table-style-css{
@@ -115,4 +121,8 @@ input:active {
 
 #cadastrar {
     margin-right: 10px;
+}
+
+td.text-right {
+    text-align: right !important;
 }

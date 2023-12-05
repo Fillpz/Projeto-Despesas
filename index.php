@@ -25,10 +25,6 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: var(--cor_primaria);">
         <div class="container-fluid mx-5">
             <a class="navbar-brand" style="color: #ffffff; font-weight: bold" href="index.php">SpendMate</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
     </nav>
 
