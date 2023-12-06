@@ -21,7 +21,9 @@ Certifique-se de ter os seguintes componentes instalados em sua máquina:
 
 2. **Manter seu servidor e banco de dados mysql ativos**
 
-3. **Abrir o localhost no navegador**
+3. **Executar o script que está em db/script.sql no seu banco de dados**
+
+4. **Abrir o localhost no navegador**
     http://localhost/workspace_php
 
-4. **Testar à vontade!**
+5. **Testar à vontade!**
