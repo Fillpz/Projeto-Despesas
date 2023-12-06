@@ -29,9 +29,10 @@
     </nav>
 
     <!-- <div class="div-container-listagem"> -->
-    <div class="mt-5 mx-5">
+    <div class="mt-5 mx-5 ">
         <!-- <div> -->
         <?php
+
         include("./db/config.php");
         switch (@$_REQUEST["page"]) {
           case "novo":
@@ -47,11 +48,13 @@
             include("./core/editar.php");
             break;
           default:
+            echo " <div class='container p-0'>";
             echo "<div class='d-flex div-header-table-style-css justify-content-between align-items-center'>";
             echo "<h3 class='fs-3 fw-bold float-left' style='margin-left:15px;' >Lista de Despesas</h3>";
             if (@$_REQUEST["page"] != "novo") {
               echo "<a type='submit' id='cadastrar' href='?page=novo' class='btn ml-auto' style='background-color: var(--cor_secundaria); color:white; margin-right: 15px; font-weight: bold;'>Cadastrar</a>";
             }
+            echo "</div>";
             echo "</div>";
         }
         ?>

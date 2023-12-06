@@ -12,7 +12,6 @@ table tbody {
     width: 100%;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -126,3 +125,36 @@ input:active {
 td.text-right {
     text-align: right !important;
 }
+
+th {
+    text-align: center !important;
+}
+
+@media (min-width: 776px){
+
+    .container, .container-md, .container-sm {
+        max-width: 776px !important;
+    }
+
+    th, td, td button.btn{
+        font-size: 16px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+}
+
+@media (min-width: 576px){
+    .container, .container-sm {
+        max-width: 576px;
+    }
+
+    th, td, td button.btn{
+        font-size: 10px;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+
+}
+
+

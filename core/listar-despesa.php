@@ -3,6 +3,7 @@
 
     $sql = "SELECT * FROM despesas ORDER BY data_limite";
 
+    
     $res = $conn->query($sql);
 
     $quantidade = $res->num_rows;
@@ -10,6 +11,7 @@
     $totalDespesas = 0;
 
     if($quantidade > 0){
+        print " <div class='container mx-auto p-0'>";
         print "<table class='table mt-4 table-style-css shadow table-hover table-striped table-bordered'>";
             print "<tr>";
             print "<th>#</th>";
@@ -46,6 +48,7 @@
             print "</tr>";
             $totalDespesas += $row->valor_despesa;
         }
+        print "<h2 class='mt-4 text-center fs-3 fw-bold float-right' style='margin-left:15px;'>Custo Total: R$".str_replace(".", ",", $totalDespesas) ."</h2>";
     } else {
         print "<p class='alert alert-danger>Sem registros</p>";
     }
