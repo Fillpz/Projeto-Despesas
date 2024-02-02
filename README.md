@@ -2,13 +2,9 @@
 Um projeto de controle de orçamentos e despesas pessoais em PHP e MySQL
 
 # Equipe
-- Gabriel Salazar Araujo Alcantara
 - Filipe Silva de Pinho
-- Bianca Santos Lima
-- Larissa Santos Souza
-- Luis Henrique
-- Douglas Teixeira
-
+- Gabriel Salazar Araujo Alcantara
+  
 # Pré-requisitos
 
 Certifique-se de ter os seguintes componentes instalados em sua máquina:
